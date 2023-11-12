@@ -1,0 +1,44 @@
+﻿@model ProyectoMVC.Models.Herramientas
+
+@{
+    ViewBag.Title = "Registrar Herramienta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registrar Herramientas</h2>
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Nueva Herramienta</h4>
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("Registrar", "Herramienta")" method="post">
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="text" class="form-control" name="Id" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cantidad</label>
+                        <input type="text" class="form-control" name="Cantidad" />
+                    </div>
+                    <div class="form-group">
+                        <label>Herramienta</label>
+                        <input type="text" class="form-control" name="Herramienta" />
+                    </div>
+                    <div class="form-group">
+                        <label>Descripcion</label>
+                        <input type="text" class="form-control" name="Descripcion" />
+                    </div>
+                    <button type="submit" class="btn-primary">Registrar</button>
+                    <a class="btn btn-success" href="@Url.Action("Herramienta_Vista", "Herramienta")">Volver</a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

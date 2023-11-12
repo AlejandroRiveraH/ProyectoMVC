@@ -1,0 +1,55 @@
+﻿@model List< ProyectoMVC.Models.Colaboradores>
+
+@{
+    ViewBag.Title = "Colaboradores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nomina de Colaboradores</h2>
+
+<div class="row" style="margin-top:38px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+
+            <div class="panel-heading">
+                <h4>Lista de contacto</h4>
+
+            </div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="@Url.Action("Registrar", "Colaborador")">Crear Nuevo</a>
+                <hr />
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Identificacion</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Fecha_Registro</th>
+                                <th style="width:150px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (ProyectoMVC.Models.Colaboradores item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Identificacion</td>
+                                    <td>@item.Nombre</td>
+                                    <td>@item.Apellidos</td>
+                                    <td>@item.Fecha_Registro.ToString("dd/MM/yyyy")</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

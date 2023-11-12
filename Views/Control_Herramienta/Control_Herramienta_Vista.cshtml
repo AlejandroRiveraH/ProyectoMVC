@@ -1,0 +1,56 @@
+﻿@model List<ProyectoMVC.Models.Control_Herramientas>
+
+@{
+    ViewBag.Title = "Control Herramienta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Control de Prestamo de Herramientas</h2>
+
+<div class="row" style="margin-top:38px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+
+            <div class="panel-heading">
+                <h4>Lista de contacto</h4>
+
+            </div>
+            <div class="panel-body">
+                <a class="btn btn-success" href="@Url.Action("Registrar", "Control_Herramienta")">Crear Nuevo</a>
+                <hr />
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Identificacion</th>
+                                <th>Herramienta</th>
+                                <th>Cantidad</th>
+                                <th>Fecha_Registro</th>
+                                <th>Fecha_Entrega</th>
+                                <th style="width:150px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (ProyectoMVC.Models.Control_Herramientas item in Model)
+                            {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Identificacion</td>
+                                <td>@item.Herramienta</td>
+                                <td>@item.Cantidad</td>
+                                <td>@item.Fecha_Registro.ToString("dd/MM/yyyy")</td>
+                                <td>@item.Fecha_Entrega.ToString("dd/MM/yyyy")</td>
+
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

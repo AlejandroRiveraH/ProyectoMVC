@@ -1,0 +1,50 @@
+﻿@model ProyectoMVC.Models.Colaboradores
+
+@{
+    ViewBag.Title = "Registrar Colaborador";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Registrar Colaborador</h2>
+
+
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Nuevo Colaborador</h4>
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("Registrar", "Colaborador")" method="post">
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="text" class="form-control" name="Id" />
+                    </div>
+                    <div class="form-group">
+                        <label>Identificacion</label>
+                        <input type="text" class="form-control" name="Identificacion" />
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="Nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" class="form-control" name="Apellidos" />
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha_Registro</label>
+                        <input type="date" class="form-control" name="Fecha_Registro" />
+                    </div>
+                    <button type="submit" class="btn-primary">Registrar</button>
+                    <a class="btn btn-success" href="@Url.Action("Colaborador_Vista", "Colaborador")">Volver</a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

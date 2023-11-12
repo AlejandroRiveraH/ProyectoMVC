@@ -1,0 +1,52 @@
+﻿@model ProyectoMVC.Models.Control_Herramientas
+
+@{
+    ViewBag.Title = "Registrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<h2>Control de Herramientas</h2>
+
+<div class="row" style="margin-top:30px">
+    <div class="col-sm-12">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h4>Nuevo Prestamo</h4>
+            </div>
+            <div class="panel-body">
+                <form action="@Url.Action("Registrar", "Control_Herramienta")" method="post">
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="text" class="form-control" name="Id" />
+                    </div>
+                    <div class="form-group">
+                        <label>Identificacion</label>
+                        <input type="text" class="form-control" name="Identificacion" />
+                    </div>
+                    <div class="form-group">
+                        <label>Herramienta</label>
+                        <input type="text" class="form-control" name="Herramienta" />
+                    </div>
+                    <div class="form-group">
+                        <label>Cantidad</label>
+                        <input type="text" class="form-control" name="Cantidad" />
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha_Registro</label>
+                        <input type="date" class="form-control" name="Fecha_Registro" />
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha_Entrega</label>
+                        <input type="date" class="form-control" name="Fecha_Entrega" />
+                    </div>
+                    <button type="submit" class="btn-primary">Registrar</button>
+                    <a class="btn btn-success" href="@Url.Action("Control_Herramienta_Vista", "Control_Herramienta")">Volver</a>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

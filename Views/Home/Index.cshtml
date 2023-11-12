@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Bodega";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Bodega de Herramientas UNED</h1>
+        <p class="lead">Esta es la aplicación que pemite el control de las herramientas en la UNED.</p>
+       
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Herramientas</h2>
+            <p>
+                En esta sección usted puede observar el inventario general de las herramientas disponibles, además de registrar nuevas herramientas.
+            </p>
+            <p><a class="btn btn-outline-dark" href="@Url.Action("Herramienta_Vista", "Herramienta")">Herramientas &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">Colaboradores</h2>
+            <p>En esta Sección usted puede observar la nomina de los colaboradores, además de registrar nuevos colaboradores.</p>
+            <p><a class="btn btn-outline-dark" href="@Url.Action("Colaborador_Vista", "Colaborador")">Colaboradores &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Control de Herramientas</h2>
+            <p>En esta Sección usted puede tener un control de prestamos de las herramientas.</p>
+            <p><a class="btn btn-outline-dark" href="@Url.Action("Control_Herramienta_Vista", "Control_Herramienta")">Control de Herramientas &raquo;</a></p>
+        </section>
+    </div>
+</main>
